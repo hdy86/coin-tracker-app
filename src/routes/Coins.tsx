@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
-import { fetchCoins } from "../api";
+import { fetchCoins, ICoin } from "../api";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -55,16 +54,6 @@ const Img = styled.img`
 const Loader = styled.div`
   text-align: center;
 `;
-
-interface ICoin {
-  id: string;
-  name: string;
-  symbol: string;
-  rank: number;
-  is_new: boolean;
-  is_active: boolean;
-  type: string;
-}
 
 function Coins() {
   /* const [coins, setCoins] = useState<ICoin[]>([]);
