@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
+  max-width: 480px;
+  margin: 0 auto;
   padding: 0 20px;
 `;
 const Header = styled.header`
