@@ -26,14 +26,15 @@ const Header = styled.header`
 `;
 const Title = styled.h1`
   font-size: 48px;
-  color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.accentColor1};
+  font-weight: bold;
 `;
 const Overview = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${(props) => props.theme.bgOpacity2};
 `;
 const OverviewItem = styled.div`
   display: flex;
@@ -63,13 +64,13 @@ const Tabs = styled.div`
 const Tab = styled.span<{ isActive: boolean }>`
   font-size: 18px;
   color: ${(props) =>
-    props.isActive ? props.theme.accentColor : props.theme.textColor};
+    props.isActive ? props.theme.accentColor2 : props.theme.textColor};
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
   padding: 10px 0px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: ${(props) => props.theme.bgOpacity1};
 
   a {
     display: block;
@@ -85,7 +86,6 @@ interface IRouteParams {
 interface IRouteState {
   name: string;
 }
-
 interface IInfo {
   id: string;
   name: string;

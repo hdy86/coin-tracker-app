@@ -18,7 +18,13 @@ const Header = styled.header`
 `;
 const Title = styled.h1`
   font-size: 48px;
-  color: ${(props) => props.theme.accentColor};
+  color: ${(props) => props.theme.accentColor1};
+  font-weight: bold;
+`;
+const Text = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 `;
 const CoinsList = styled.ul`
   padding-bottom: 60px;
@@ -37,7 +43,7 @@ const Coin = styled.li`
   }
   &:hover {
     a {
-      color: ${(props) => props.theme.accentColor};
+      color: ${(props) => props.theme.accentColor2};
     }
   }
 `;
@@ -99,7 +105,10 @@ function Coins() {
                 <Img
                   src={`https://coinicons-api.vercel.app/api/icon/${coin.symbol.toLowerCase()}`}
                 />
-                {coin.name} &rarr;
+                <Text>
+                  <span>{coin.name}</span>
+                  <span>&rarr;</span>
+                </Text>
               </Link>
             </Coin>
           ))}
