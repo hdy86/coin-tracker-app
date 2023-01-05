@@ -66,7 +66,7 @@ const OverviewItem = styled.div`
   width: 33%;
 
   span {
-    font-size: 18px;
+    font-size: 20px;
   }
   span:first-child {
     font-size: 12px;
@@ -83,10 +83,10 @@ const Tabs = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin: 25px 0px;
+  margin: 50px 0px 25px;
 `;
 const Tab = styled.span<{ isActive: boolean }>`
-  font-size: 18px;
+  font-size: 22px;
   color: ${(props) =>
     props.isActive ? props.theme.accentColor2 : props.theme.textColor};
   font-weight: bold;
@@ -208,7 +208,7 @@ function Coin() {
                 <Chart coinId={coinId} />
               </Route>
               <Route path={`/:coinId/price`}>
-                <Price />
+                <Price coinId={coinId} />
               </Route>
             </Switch>
           </>

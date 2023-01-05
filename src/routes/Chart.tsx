@@ -29,7 +29,7 @@ interface IHistorical {
 
 function Chart({ coinId }: IChartProps) {
   const params = useParams();
-  const { isLoading, data } = useQuery<IHistorical[]>(["ohlcv", coinId], () =>
+  const { isLoading, data } = useQuery<IHistorical[]>(["chart", coinId], () =>
     fetchCoinHistory(coinId)
   );
   const ohlcData = data?.map((price) => ({
