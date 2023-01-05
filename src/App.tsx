@@ -1,5 +1,5 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Router from "./Router";
 import { ReactQueryDevtools } from "react-query/devtools";
 
@@ -68,12 +68,33 @@ a {
 }
 `;
 
+const ModeBtn = styled.button`
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+`;
+
 function App() {
   return (
     <>
+      <ModeBtn>
+        {/* <img src="https://cdn-icons-png.flaticon.com/512/8443/8443248.png" /> */}
+        <img src="https://cdn-icons-png.flaticon.com/512/8637/8637690.png" />
+      </ModeBtn>
       <GlobalStyle />
       <Router />
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </>
   );
 }
