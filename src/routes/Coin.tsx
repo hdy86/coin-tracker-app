@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import { Helmet } from "react-helmet";
 import {
   Link,
   Route,
@@ -67,7 +67,7 @@ const Tab = styled.span<{ isActive: boolean }>`
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  padding: 7px 0px;
+  padding: 10px 0px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
 
@@ -180,6 +180,11 @@ function Coin() {
 
   return (
     <Container>
+      <Helmet>
+        <title>
+          {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
+        </title>
+      </Helmet>
       <Header>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
