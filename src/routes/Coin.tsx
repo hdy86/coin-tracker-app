@@ -24,6 +24,10 @@ const HomeBtn = styled.div`
     justify-content: center;
     width: 40px;
     height: 40px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
 
     img {
