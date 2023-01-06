@@ -2,6 +2,9 @@
 
 코인 추적 프로그램
 
+**github.io 배포 사이트** /
+<a href="https://hdy86.github.io/coin-tracker-app/" title="Coin Tracker" target="_blank">링크</a>
+
 ## Using :
 
 - Styled Components
@@ -18,11 +21,6 @@
 - Coin Paprika API
 - Apex Charts
 - Theme Light / Dark Mode
-
-## Site Link :
-
-**github.io 배포 사이트** /
-<a href="https://hdy86.github.io/coin-tracker-app/" title="Coin Tracker" target="_blank">링크</a>
 
 ## Reference :
 
