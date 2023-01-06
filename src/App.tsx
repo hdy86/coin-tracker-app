@@ -1,7 +1,10 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import Router from "./Router";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { ReactQueryDevtools } from "react-query/devtools";
+import { useRecoilState } from "recoil";
+import { DarkTheme, LightTheme } from "./theme";
+import { isDarkAtom } from "./atoms";
+import Router from "./Router";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -87,16 +90,21 @@ const ModeBtn = styled.button`
 `;
 
 function App() {
+  const [isDark, setIsDark] = useRecoilState(isDarkAtom);
+
   return (
-    <>
-      <ModeBtn>
-        {/* <img src="https://cdn-icons-png.flaticon.com/512/8443/8443248.png" /> */}
-        <img src="https://cdn-icons-png.flaticon.com/512/8637/8637690.png" />
+    <ThemeProvider theme={isDark ? DarkTheme : LightTheme}>
+      <ModeBtn onClick={() => setIsDark((prev) => !prev)}>
+        {isDark ? (
+          <img src="https://cdn-icons-png.flaticon.com/512/8637/8637690.png" />
+        ) : (
+          <img src="https://cdn-icons-png.flaticon.com/512/8443/8443248.png" />
+        )}
       </ModeBtn>
       <GlobalStyle />
       <Router />
       <ReactQueryDevtools />
-    </>
+    </ThemeProvider>
   );
 }
 

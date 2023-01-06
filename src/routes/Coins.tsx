@@ -29,7 +29,6 @@ const CoinsList = styled.ul`
   padding-bottom: 60px;
 `;
 const Coin = styled.li`
-  color: ${(props) => props.theme.bgColor};
   margin-bottom: 10px;
   border-radius: 15px;
   background-color: white;
@@ -38,6 +37,7 @@ const Coin = styled.li`
     display: flex;
     align-items: center;
     padding: 20px;
+    color: #666;
     transition: color 0.2s ease-in;
   }
   &:hover {
