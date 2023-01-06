@@ -9,7 +9,7 @@ const ChartWrap = styled.div`
 `;
 const ChartBox = styled.div`
   & + & {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 `;
 
@@ -61,7 +61,7 @@ function Chart({ coinId }: IChartProps) {
                 theme: { mode: "dark" },
                 chart: {
                   width: 500,
-                  height: 500,
+                  height: 400,
                   toolbar: { show: false },
                   background: "transparent",
                 },
@@ -106,8 +106,8 @@ function Chart({ coinId }: IChartProps) {
                 theme: { mode: "dark" },
                 chart: {
                   type: "candlestick",
-                  height: 500,
                   width: 500,
+                  height: 400,
                   toolbar: { show: false },
                   background: "transparent",
                 },

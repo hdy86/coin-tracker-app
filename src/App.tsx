@@ -103,7 +103,7 @@ function App() {
       </ModeBtn>
       <GlobalStyle />
       <Router />
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </ThemeProvider>
   );
 }
