@@ -51,6 +51,10 @@ const Title = styled.h1`
   font-size: 48px;
   color: ${(props) => props.theme.accentColor1};
   font-weight: bold;
+
+  @media all and (max-width: 767px) {
+    font-size: 30px;
+  }
 `;
 const Overview = styled.div`
   display: flex;
